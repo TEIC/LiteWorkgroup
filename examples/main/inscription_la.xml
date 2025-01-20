@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:space="preserve" xml:lang="la" xml:base="ex-epidoctemplate.xml">
+		<teiHeader>
+			<fileDesc>
+				<titleStmt>
+				<title>Inscription from Salernum?</title>
+				</titleStmt>  
+				<publicationStmt>
+				<authority>Epigraphic Database Roma</authority>
+				<idno type="URI">http://www.edr-edr.it/edr_programmi/res_complex_comune.php?id_nr=EDR120622</idno>
+				<idno type="TM">258138</idno>
+				<idno type="localID">EDR120622</idno>	
+				<availability>
+					<licence target=" http://www.europeana.eu/rights/rr-f/">Reserved Rights - Free access via Epigraphic Database Roma</licence>
+				</availability>
+				</publicationStmt>
+				<sourceDesc>
+				<msDesc>
+					<msIdentifier>
+						
+						
+						
+						<repository>Amalfi (Salerno), frazione di Pogerola, chiesa di S.Marina (solo fr. ang. sup. dx)</repository>
+						<collection/>
+						<idno/>
+					</msIdentifier>
+					<physDesc>
+						<objectDesc>
+						<supportDesc>
+							<support>
+								<objectType ref="http://www.eagle-network.eu/voc/objtyp/lod/257">tabula</objectType>
+								<material ref="http://www.eagle-network.eu/voc/material/lod/48">marmor</material>
+								<p/>
+								<dimensions unit="cm">
+								<height>38.00</height>
+								<width>28.00</width>
+								<depth>5.00</depth>
+								</dimensions>
+								<rs type="decoration" ref="http://www.eagle-network.eu/voc/decor/lod/1000" xml:lang="en">no decoration</rs>
+								<rs type="statPreserv">tit. mutilus</rs>
+							</support>
+						</supportDesc>
+						<layoutDesc>
+							<layout>
+								<rs type="execution" ref="http://www.eagle-network.eu/voc/writing/lod/1">scalpro</rs>
+							</layout>
+						</layoutDesc>
+						</objectDesc>
+						<handDesc>
+						<handNote>
+							<width unit="cm"/>
+							<height unit="cm">1,5-2</height>
+						</handNote>
+						</handDesc>
+					</physDesc>
+					
+					<history>
+						<origin>
+
+						<origPlace><placeName type="provinceItalicRegion">Latium et Campania cum insulis (Regio I)</placeName><placeName>Salernum?</placeName></origPlace>
+						<origDate notBefore-custom="101" notAfter-custom="200" datingMethod="http://en.wikipedia.org/wiki/Julian_calendar">101 AD - 200 AD</origDate>
+							
+						
+						</origin>
+						<provenance type="found"> 
+						<placeName>Salerno?</placeName>                     
+						<placeName type="locus">Amalfi (Salerno), frazione di Pogerola, 'in Angeli marmore altaris' (inizi XVI sec.) (reimpiego)</placeName>
+						<placeName type="modern_region"/><placeName type="modernCountry">Italia</placeName></provenance>
+					</history>
+				</msDesc>
+				</sourceDesc>
+			</fileDesc>
+				
+			<encodingDesc>
+				<p>Marked-up according to the EpiDoc Guidelines</p>
+				<classDecl>
+				<taxonomy>
+					<category xml:id="representation">
+						<catDesc>Digitized other representations</catDesc>
+					</category>
+				</taxonomy>
+				</classDecl>
+			</encodingDesc>
+			<profileDesc>
+				<textClass>
+		<keywords>
+		<term ref="http://www.eagle-network.eu/voc/typeins/lod/92">sepulcralis, carmen</term>
+		</keywords>
+		</textClass>
+
+				<langUsage>
+				<language ident="ar">Arabic</language>
+				<language ident="en">English</language>
+				<language ident="fr">French</language>
+				<language ident="de">German</language>
+				<language ident="grc">Ancient Greek</language>
+				<language ident="grc-Latn">Transliterated Greek</language>
+				<language ident="el">Modern Greek</language>
+				<language ident="he">Hebrew</language>
+				<language ident="it">Italian</language>
+				<language ident="la">Latin</language>
+				<language ident="sp">Spanish</language>
+				</langUsage>
+			<creation>EAGLE - Europeana Network of Ancient Greek and Latin Epigraphy</creation></profileDesc>
+			<revisionDesc>
+			<change when="2018-10-15" who="Umberto SOLDOVIERI">
+			</change>
+
+			</revisionDesc>
+		</teiHeader>
+		
+			<facsimile>
+			
+					<graphic url="http://www.edr-edr.it/foto_epigrafi/immagini_uso/120/120622.jpg">
+					<desc> - Image already provided by Linked Heritage
+					<ref type="licence" target="http://www.europeana.eu/rights/rr-f/">Rights Reserved - Free Access via Epigraphic Database Roma</ref>	
+					</desc>
+					</graphic>
+				
+			</facsimile>
+			
+		<text>
+			<body>
+					
+				<div type="bibliography">
+				<listBibl>
+		
+					<bibl>
+						CIL 10, 00659 (1)
+					</bibl> 
+			
+					<bibl>
+						CLE 1176 (con dubbi sull'autenticità) (2)
+					</bibl> 
+			
+					<bibl>
+						G. Herrlinger, Totenklage um Tiere in der antiken Dichtung, Stuttgart 1930, p. 47 sg., nr. 49 (3)
+					</bibl> 
+			
+					<bibl>
+						InscrIt, 01, 1, 228 con foto (V. Bracco) (4)
+					</bibl> 
+			
+					<bibl>
+						Zeitschr. Pap. Ep., 100, 1994, p. 418 (M.G. Granino Cecere) (5)
+					</bibl> 
+			
+					<bibl>
+						E. Courtney, Musa Lapidaria. A Selection of Latine Verse Inscriptions, Atlanta 1995, p. 196 sg. nr. 203 , cfr. p. 408 sg. (6)
+					</bibl> 
+			
+					<bibl>
+						Quaderni del Ramo d'Oro, 8, 2016, p. 48 sgg. con foto e traduzione italiana (C. Stevanato) (7)
+					</bibl> 
+			
+				</listBibl>
+				</div>
+				
+				
+				<!--
+				P̲o̲r̲t̲a̲v̲i̲ ̲l̲a̲c̲r̲i̲m̲i̲s̲ ̲m̲a̲d̲i̲d̲us té, nostra catella, / q̲u̲o̲d̲ ̲f̲e̲c̲i̲ ̲l̲u̲s̲t̲r̲i̲s̲ ̲l̲a̲e̲tior ante tribus. / E̲r̲g̲o̲ ̲m̲i̲h̲i̲, ̲P̲a̲t̲r̲i̲c̲e̲, ̲i̲a̲m̲ ̲n̲ón dabis óscula mille, / n̲e̲c̲ ̲p̲o̲t̲e̲r̲i̲s̲ ̲c̲o̲l̲l̲o̲ ̲g̲r̲a̲ta cubáre meó. / T̲r̲i̲s̲t̲i̲s̲ ̲m̲a̲r̲m̲o̲r̲e̲a̲ ̲p̲o̲s̲u̲i té séde merentem / e̲t̲ ̲i̲u̲n̲x̲i̲ ̲s̲e̲m̲p̲e̲r̲ ̲M̲a̲n̲ibus ipse meis. / M̲o̲r̲i̲b̲[us] a̲r̲g̲u̲t̲i̲s̲ ̲h̲o̲m̲i̲n̲e̲m simuláre paratam / p̲e̲r̲d̲i̲d̲i̲m̲u̲s̲ ̲q̲u̲a̲l̲e̲s̲ ̲h̲e̲i̲ mihi déliciás. / T̲u̲, ̲d̲u̲l̲c̲i̲s̲ ̲P̲a̲t̲r̲i̲c̲e̲, ̲n̲o̲s̲t̲r̲a̲s̲ ̲a̲ttingere mensás / c̲o̲n̲s̲u̲e̲r̲a̲s̲ (:consueveras) g̲r̲e̲m̲i̲o̲ ̲p̲̲̲o̲s̲c̲e̲r̲e̲ ̲b̲l̲a̲n̲d̲a̲s̲ ̲c̲i̲b̲o̲s̲. / L̲a̲m̲b̲e̲r̲e̲ ̲t̲u̲ ̲c̲a̲l̲i̲c̲e̲m̲ ̲l̲i̲n̲g̲u̲a̲ ̲r̲a̲p̲i̲e̲n̲t̲e̲ ̲s̲o̲l̲e̲b̲a̲s̲, / q̲u̲e̲m̲ ̲t̲i̲b̲i̲ ̲̲s̲̲a̲e̲p̲e̲ ̲m̲e̲a̲e̲ ̲s̲u̲s̲t̲i̲n̲e̲r̲e̲ ̲m̲a̲n̲u̲s̲, / a̲c̲c̲i̲̲p̲[ere] ̲e̲t̲ ̲l̲a̲s̲s̲u̲m̲ ̲c̲a̲u̲d̲a̲ (:coda) ̲g̲a̲u̲d̲e̲n̲t̲e̲ ̲f̲r̲e̲q̲u̲e̲n̲t̲e̲r̲ / - - - - - -
+				--><div type="edition" xml:lang="la"><head>Text</head><ab><lb n="1"/>
+				<supplied reason="undefined" evidence="previouseditor">Portavi</supplied> ̲<supplied reason="undefined" evidence="previouseditor">lacrimis</supplied> ̲<supplied reason="undefined" evidence="previouseditor">madid</supplied>us té, nostra catella,<lb n="2"/><supplied reason="undefined" evidence="previouseditor">quod</supplied> ̲<supplied reason="undefined" evidence="previouseditor">feci</supplied> ̲<supplied reason="undefined" evidence="previouseditor">lustris</supplied> ̲<supplied reason="undefined" evidence="previouseditor">lae</supplied>tior ante tribus.<lb n="3"/><supplied reason="undefined" evidence="previouseditor">Ergo</supplied> ̲<supplied reason="undefined" evidence="previouseditor">mihi</supplied>, ̲<supplied reason="undefined" evidence="previouseditor">Patrice</supplied>, ̲<supplied reason="undefined" evidence="previouseditor">iam</supplied> ̲<supplied reason="undefined" evidence="previouseditor">n</supplied>ón dabis óscula mille,<lb n="4"/><supplied reason="undefined" evidence="previouseditor">nec</supplied> ̲<supplied reason="undefined" evidence="previouseditor">poteris</supplied> ̲<supplied reason="undefined" evidence="previouseditor">collo</supplied> ̲<supplied reason="undefined" evidence="previouseditor">gra</supplied>ta cubáre meó.<lb n="5"/><supplied reason="undefined" evidence="previouseditor">Tristis</supplied> ̲<supplied reason="undefined" evidence="previouseditor">marmorea</supplied> ̲<supplied reason="undefined" evidence="previouseditor">posu</supplied>i té séde merentem<lb n="6"/><supplied reason="undefined" evidence="previouseditor">et</supplied> ̲<supplied reason="undefined" evidence="previouseditor">iunxi</supplied> ̲<supplied reason="undefined" evidence="previouseditor">semper</supplied> ̲<supplied reason="undefined" evidence="previouseditor">Man</supplied>ibus ipse meis.<lb n="7"/><supplied reason="undefined" evidence="previouseditor">Morib</supplied><supplied reason="lost">us</supplied> <supplied reason="undefined" evidence="previouseditor">argutis</supplied> ̲<supplied reason="undefined" evidence="previouseditor">homine</supplied>m simuláre paratam<lb n="8"/><supplied reason="undefined" evidence="previouseditor">perdidimus</supplied> ̲<supplied reason="undefined" evidence="previouseditor">quales</supplied> ̲<supplied reason="undefined" evidence="previouseditor">hei</supplied> mihi déliciás.<lb n="9"/><supplied reason="undefined" evidence="previouseditor">Tu</supplied>, ̲<supplied reason="undefined" evidence="previouseditor">dulcis</supplied> ̲<supplied reason="undefined" evidence="previouseditor">Patrice</supplied>, ̲<supplied reason="undefined" evidence="previouseditor">nostras</supplied> ̲<supplied reason="undefined" evidence="previouseditor">a</supplied>ttingere mensás<lb n="10"/><choice><sic><supplied reason="undefined" evidence="previouseditor">consueras</supplied></sic><corr>consueveras</corr></choice> <supplied reason="undefined" evidence="previouseditor">gremio</supplied> ̲<supplied reason="undefined" evidence="previouseditor">poscere</supplied> ̲<supplied reason="undefined" evidence="previouseditor">blandas</supplied> ̲<supplied reason="undefined" evidence="previouseditor">cibos</supplied>.<lb n="11"/><supplied reason="undefined" evidence="previouseditor">Lambere</supplied> ̲<supplied reason="undefined" evidence="previouseditor">tu</supplied> ̲<supplied reason="undefined" evidence="previouseditor">calicem</supplied> ̲<supplied reason="undefined" evidence="previouseditor">lingua</supplied> ̲<supplied reason="undefined" evidence="previouseditor">rapiente</supplied> ̲<supplied reason="undefined" evidence="previouseditor">solebas</supplied>,<lb n="12"/><supplied reason="undefined" evidence="previouseditor">quem</supplied> ̲<supplied reason="undefined" evidence="previouseditor">tibi</supplied> <supplied reason="undefined" evidence="previouseditor">s</supplied>̲<supplied reason="undefined" evidence="previouseditor">aepe</supplied> ̲<supplied reason="undefined" evidence="previouseditor">meae</supplied> ̲<supplied reason="undefined" evidence="previouseditor">sustinere</supplied> ̲<supplied reason="undefined" evidence="previouseditor">manus</supplied>,<lb n="13"/><supplied reason="undefined" evidence="previouseditor">acci</supplied>̲<supplied reason="undefined" evidence="previouseditor">p</supplied><supplied reason="lost">ere</supplied> ̲<supplied reason="undefined" evidence="previouseditor">et</supplied> ̲<supplied reason="undefined" evidence="previouseditor">lassum</supplied> <choice><sic>̲<supplied reason="undefined" evidence="previouseditor">cauda</supplied></sic><corr>coda</corr></choice> ̲<supplied reason="undefined" evidence="previouseditor">gaudente</supplied> ̲<supplied reason="undefined" evidence="previouseditor">frequenter</supplied><lb n="0"/><gap reason="lost" extent="unknown" unit="line"/></ab></div>
+
+				<div type="apparatus">
+		
+					<p>
+						Textus secundum (1)-(4), contulerunt B.M. Medaglia et U. Soldovieri a. 2012&lt;br&gt;v.6: manib(us) (1)-(3), (6); &lt;br&gt;v.7: morib(us) (1)-(3), (5), (6); tuttavia l'impaginazione presuppone piuttosto che il sostantivo fosse integro;&lt;br&gt;v.14: in fine 'et mi omnes gestu dicere blanditias' addit codex, sed adnotans: 'ultimus versus additus a Basilio Zanchio' (1).
+					</p> 
+			
+				</div>
+			
+				<div type="commentary">
+				<p/>
+				</div>
+
+			</body>
+		</text>
+		</TEI>
