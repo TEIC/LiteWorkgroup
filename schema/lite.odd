@@ -57,7 +57,7 @@
         <!--        objectName must be allowed as a direct child of object -->
         <!-- roleName -->
         
-        <elementSpec module="core" ident="text" mode="change">
+       <elementSpec module="core" ident="text" mode="change">
           <desc>This element must have one or more <gi>text</gi> elements or one or more
               <gi>div</gi> elements.</desc>
           <content>
@@ -70,7 +70,7 @@
 
         <elementSpec module="msdescription" ident="msIdentifier" mode="change">
           <content>
-            <!--            This will be simplified when interleave is adopted-->
+            <!-- This will be simplified when interleave is adopted-->
             <sequence minOccurs="1" maxOccurs="unbounded">
               <alternate>
                 <elementRef key="msName"/>
@@ -131,6 +131,296 @@
             </sequence>
           </content>
         </elementSpec>
+
+        <classSpec type="atts" ident="att.rendition" mode="change">
+          <attList>
+            <attDef ident="rend" mode="replace">
+              <datatype minOccurs="1" maxOccurs="unbounded">
+                <dataRef key="teidata.word"/>
+              </datatype>
+              <valList type="semi">
+                <valItem ident="italic"/>
+                <valItem ident="bold"/>
+                <valItem ident="underline"/>
+                <valItem ident="small-caps"/>
+                <valItem ident="initial"/>
+                <valItem ident="super"/>
+                <valItem ident="sub"/>
+                <valItem ident="spaced-out"/>
+                <valItem ident="coloured"/>
+                <valItem ident="smaller"/>
+                <valItem ident="larger"/>
+                <valItem ident="indented"/>
+              </valList>
+            </attDef>
+          </attList>
+        </classSpec>
+
+        <macroSpec ident="macro.paraMetaContent">
+          <content>
+            <alternate minOccurs="0" maxOccurs="unbounded">
+              <textNode/>
+              <classRef key="model.quoteLike"/>
+              <!-- <memberOf key="model.emphMeta"/>
+           This only includes code, distinct, emph, title
+           -->
+              <classRef key="model.measureLike"/>
+              <classRef key="model.nameLike.agent"/>
+              <classRef key="model.pPart.msdesc"/>
+              <classRef key="model.ptrLike"/>
+              <classRef key="model.segLike"/>
+              <elementRef key="figure"/>
+              <elementRef key="note"/>
+              <elementRef key="eg"/>
+              <elementRef key="formula"/>
+              <elementRef key="graphic"/>
+              <elementRef key="media"/>
+              <elementRef key="q"/>
+              <elementRef key="date"/>
+              <elementRef key="placeName"/>
+              <elementRef key="objectName"/>
+              <elementRef key="eventName"/>
+              <elementRef key="idno"/>
+            </alternate>
+          </content>
+        </macroSpec>
+
+        <macroSpec ident="macro.paraTransContent">
+          <content>
+            <alternate minOccurs="0" maxOccurs="unbounded">
+              <textNode/>
+              <elementRef key="fs"/>
+              <elementRef key="index"/>
+              <elementRef key="figure"/>
+              <elementRef key="metamark"/>
+              <elementRef key="notatedMusic"/>
+              <elementRef key="placeName"/>
+              <elementRef key="objectName"/>
+              <elementRef key="eventName"/>
+              <elementRef key="idno"/>
+              <elementRef key="rs"/>
+              <classRef key="model.gLike"/>
+              <classRef key="model.global.edit"/>
+              <classRef key="model.milestoneLike"/>
+              <classRef key="model.noteLike"/>
+              <classRef key="model.inter"/>
+              <classRef key="model.egLike"/>
+              <classRef key="model.graphicLike"/>
+              <classRef key="model.emphLike"/>
+              <classRef key="model.hiLike"/>
+              <classRef key="model.dateLike"/>
+              <classRef key="model.measureLike"/>
+              <classRef key="model.nameLike.agent"/>
+              <classRef key="model.pPart.editorial"/>
+              <classRef key="model.ptrLike"/>
+              <classRef key="model.segLike"/>
+            </alternate>
+          </content>
+        </macroSpec>
+
+        <elementSpec ident="p" mode="replace">
+          <classes>
+            <memberOf key="att.cmc"/>
+            <memberOf key="att.global.linking"/>
+            <memberOf key="att.global.analytic"/>
+            <memberOf key="att.global.responsibility"/>
+            <memberOf key="att.global.source"/>
+            <memberOf key="model.pLike"/>
+          </classes>
+          <content>
+            <macroRef key="macro.paraMetaContent"/>
+          </content>
+          <attList>
+            <attRef class="att.global" name="xml:id"/>
+            <attRef class="att.global" name="n"/>
+            <attRef class="att.global" name="xml:space"/>
+            <attRef class="att.global" name="xml:lang"/>
+            <attRef class="att.global" name="xml:base"/>
+          </attList>
+        </elementSpec>
+
+        <elementSpec ident="ab" mode="replace">
+          <classes>
+            <memberOf key="att.cmc"/>
+            <memberOf key="att.global.linking"/>
+            <memberOf key="att.global.analytic"/>
+            <memberOf key="att.global.responsibility"/>
+            <memberOf key="att.global.source"/>
+            <memberOf key="model.pLike"/>
+          </classes>
+          <content>
+            <macroRef key="macro.paraMetaContent"/>
+          </content>
+        </elementSpec>
+
+        <elementSpec ident="p-trans" mode="add">
+          <altIdent>p</altIdent>
+          <classes>
+            <memberOf key="att.global"/>
+            <memberOf key="att.cmc"/>
+            <memberOf key="att.fragmentable"/>
+            <memberOf key="att.written"/>
+            <memberOf key="model.divPart"/>
+          </classes>
+          <content>
+            <macroRef key="macro.paraTransContent"/>
+          </content>
+        </elementSpec>
+        
+        <elementSpec ident="ab-trans" mode="add">
+          <altIdent>ab</altIdent>
+          <classes>
+            <memberOf key="att.global"/>
+            <memberOf key="att.cmc"/>
+            <memberOf key="att.fragmentable"/>
+            <memberOf key="att.written"/>
+            <memberOf key="model.divPart"/>
+          </classes>
+          <content>
+            <macroRef key="macro.paraTransContent"/>
+          </content>
+        </elementSpec>
+
+        <elementSpec ident="div" mode="replace">
+          <classes>
+            <memberOf key="att.global"/>
+            <memberOf key="att.declaring"/>
+            <memberOf key="att.divLike"/>
+            <memberOf key="att.typed"/>
+            <memberOf key="att.written"/>
+            <memberOf key="model.divLike"/>
+          </classes>
+          <content>
+            <sequence>
+              <alternate minOccurs="0" maxOccurs="unbounded">
+                <classRef key="model.divTop"/>
+                <elementRef key="list"/>
+                <elementRef key="quote"/>
+                <elementRef key="metamark"/>
+                <elementRef key="prologue"/>
+                <elementRef key="floatingText"/>
+                <classRef key="model.milestoneLike"/>
+              </alternate>
+              <sequence minOccurs="0">
+                <alternate minOccurs="1" maxOccurs="unbounded">
+                  <classRef key="model.common"/>
+                  <!--                    need to fix P here in model.common -->
+                  <!--<elementRef key="p-trans"/>-->
+                  <classRef key="model.global" minOccurs="0" maxOccurs="unbounded"/>
+                </alternate>
+                <classRef key="model.divBottom" minOccurs="0" maxOccurs="unbounded"/>
+              </sequence>
+              <classRef key="model.divLike" minOccurs="0" maxOccurs="unbounded"/>
+            </sequence>
+          </content>
+        </elementSpec>
+
+        <classSpec type="model" ident="model.pLike" mode="replace">
+          <classes>
+            <memberOf key="model.correspContextPart"/>
+          </classes>
+        </classSpec>
+
+
+        <!-- Excluded elements-->
+
+        <!--  model.egLike      -->
+        <elementSpec ident="egXML" mode="delete"/>
+
+        <!-- model.emphLike-->
+        <elementSpec ident="mentioned" mode="delete"/>
+        <elementSpec ident="soCalled" mode="delete"/>
+
+        <!-- model.measureLike-->
+        <elementSpec ident="measureGrp" mode="delete"/>
+
+        <!-- model.ptrLike-->
+        <specGrp>
+          <p>Within the <ident>model.ptrLike</ident>, element <gi>ptr</gi> is deleted because any
+            pointer can be an empty <gi>ref</gi></p>
+          <elementSpec ident="ptr" mode="delete"/>
+        </specGrp>
+
+
+
+        <!-- -->
+        <specGrp>
+          <p>Within the <ident>model.segLike</ident> model, we only retain most common segmentation
+            elements.</p>
+          <elementSpec ident="c" mode="delete"/>
+          <elementSpec ident="cl" mode="delete"/>
+          <elementSpec ident="m" mode="delete"/>
+          <elementSpec ident="phr" mode="delete"/>
+        </specGrp>
+
+
+        <!-- review pPart.msdesc: allow elements and make sure it’s only allowed in p-meta -->
+
+        <!-- We need to add figure, table, and list to FREE TEXT elements in the header  -->
+
+
+
+        <!--        exclude witDetail model.global.edit and add it only to app -->
+        <!--     exclude said, and castList from model.inter -->
+
+        <!--      model.pPart.transcriptional: delete mod, redo, 
+          restore, undo         
+            -->
+
+        <classSpec module="tei" type="atts" ident="att.fragmentable" mode="replace">
+          <attList>
+            <attDef ident="part" usage="opt">
+              <datatype>
+                <dataRef key="teidata.enumerated"/>
+              </datatype>
+              <valList type="closed">
+                <valItem ident="Y">
+                  <gloss versionDate="2013-01-07" xml:lang="en">yes</gloss>
+                  <gloss versionDate="2019-06-08" xml:lang="ja">はい</gloss>
+                  <desc versionDate="2013-01-07" xml:lang="en">the element is fragmented in some
+                    (unspecified) respect</desc>
+                  <desc versionDate="2019-06-08" xml:lang="ja">要素はいくつかの（不特定の）点で断片化されている。</desc>
+                </valItem>
+                <valItem ident="N">
+                  <gloss versionDate="2013-01-07" xml:lang="en">no</gloss>
+                  <gloss versionDate="2019-06-08" xml:lang="ja">いいえ</gloss>
+                  <desc versionDate="2013-01-07" xml:lang="en">the element is not fragmented, or no
+                    claim is made as to its completeness</desc>
+                  <desc versionDate="2019-06-08" xml:lang="ja"
+                    >要素が断片化されていないか、または完全性についての主張はない。</desc>
+                </valItem>
+                <valItem ident="I">
+                  <gloss versionDate="2013-01-07" xml:lang="en">initial</gloss>
+                  <gloss versionDate="2019-06-08" xml:lang="ja">最初の</gloss>
+                  <desc versionDate="2013-01-07" xml:lang="en">this is the initial part of a
+                    fragmented element</desc>
+                  <desc versionDate="2019-06-08" xml:lang="ja">これは断片化された要素の最初の部分を示す。</desc>
+                </valItem>
+                <valItem ident="M">
+                  <gloss versionDate="2013-01-07" xml:lang="en">medial</gloss>
+                  <gloss versionDate="2019-06-08" xml:lang="ja">中間の</gloss>
+                  <desc versionDate="2013-01-07" xml:lang="en">this is a medial part of a fragmented
+                    element</desc>
+                  <desc versionDate="2019-06-08" xml:lang="ja">これは断片化された要素の中間の部分を示す。</desc>
+                </valItem>
+                <valItem ident="F">
+                  <gloss versionDate="2013-01-07" xml:lang="en">final</gloss>
+                  <gloss versionDate="2019-06-08" xml:lang="ja">最後の</gloss>
+                  <desc versionDate="2013-01-07" xml:lang="en">this is the final part of a
+                    fragmented element</desc>
+                  <desc versionDate="2019-06-08" xml:lang="ja">これは断片化された要素の最後の部分を示す。</desc>
+                </valItem>
+              </valList>
+              <remarks versionDate="2013-01-07" xml:lang="en">
+                <p>The values <val>I</val>, <val>M</val>, or <val>F</val> should be used only where
+                  it is clear how the element may be reconstituted.</p>
+              </remarks>
+              <remarks versionDate="2019-06-08" xml:lang="ja">
+                <p><val>I</val>、<val>M</val>、または<val>F</val>という値は、要素の再構成方法が明らかな場合にのみ使用する。</p>
+              </remarks>
+            </attDef>
+          </attList>
+        </classSpec>
       </schemaSpec>
     </body>
   </text>
