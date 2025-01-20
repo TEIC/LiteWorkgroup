@@ -23,7 +23,7 @@
           include="abstract authority availability calendar calendarDesc catDesc catRef category change classCode classDecl correspAction 
           correspContext correspDesc creation distributor edition editionStmt editorialDecl encodingDesc extent fileDesc handNote idno 
           keywords langUsage language licence listChange listPrefixDef notesStmt prefixDef profileDesc projectDesc publicationStmt rendition 
-          revisionDesc scriptNote seriesStmt sourceDesc tagsDecl taxonomy teiHeader textClass titleStmt unitDecl unitDef xenoData"/>
+          revisionDesc schemaRef scriptNote seriesStmt sourceDesc tagsDecl taxonomy teiHeader textClass titleStmt unitDecl unitDef xenoData"/>
         <moduleRef key="core"
           include="abbr add analytic author bibl biblScope biblStruct cb choice cit citedRange corr date del desc distinct editor ellipsis 
           emph expan foreign gap gb gloss graphic head hi imprint item l label lb lg list listBibl measure measureGrp media milestone monogr 
