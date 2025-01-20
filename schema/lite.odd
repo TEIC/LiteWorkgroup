@@ -39,7 +39,7 @@
         <!-- dictionaries module is excluded -->
         <moduleRef key="msdescription"
           include="msName msDesc msIdentifier repository altIdentifier physDesc history incipit explicit locus msContents"/>
-        <moduleRef key="transcr" include="addSpan am damage delSpan ex facsimile fw handNotes metamark restore retrace secl space subst substJoin supplied surface surfaceGrp surplus transpose undo zone"/>
+        <moduleRef key="transcr" include="addSpan am damage delSpan ex facsimile fw handNotes metamark retrace secl space subst substJoin supplied surface surfaceGrp surplus transpose zone"/>
         <moduleRef key="textcrit" include="app lem rdg listApp rdgGrp listWit wit witDetail"/>
         <moduleRef key="namesdates" include="affiliation birth country death education event eventName floruit gender geo 
           geogFeat listEvent listNym listObject listOrg listPerson listPlace listRelation location nym object objectName occupation 
