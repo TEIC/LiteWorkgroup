@@ -18,47 +18,45 @@
   <text>
     <body>
       <schemaSpec ident="newLite" start="TEI">
-        <moduleRef key="header"
-          except="appInfo application biblFull citeData citeStructure
-          conversion correction cRefPattern funder geoDecl hyphenation interpretation
-          normalization punctuation quotation segmentation stdVals namespace principal refsDecl refState samplingDecl
-          fsdDecl schemaSpec styleDefDecl sponsor tagUsage"/>
-        <moduleRef key="core"
-          except="address addressLine binaryObject divGen email headItem headLabel index 
-          postBox meeting mentioned postCode said soCalled street teiCorpus pubPlace"/>
-        <!-- corpus module is excluded  -->
         <moduleRef key="tei"/>
+        <moduleRef key="header"
+          include="abstract authority availability calendar calendarDesc catDesc catRef category change classCode classDecl correspAction 
+          correspContext correspDesc creation distributor edition editionStmt editorialDecl encodingDesc extent fileDesc handNote idno 
+          keywords langUsage language licence listChange listPrefixDef notesStmt prefixDef profileDesc projectDesc publicationStmt rendition 
+          revisionDesc scriptNote seriesStmt sourceDesc tagsDecl taxonomy teiHeader textClass titleStmt unitDecl unitDef xenoData"/>
+        <moduleRef key="core"
+          include="abbr add analytic author bibl biblScope biblStruct cb choice cit citedRange corr date del desc distinct editor ellipsis 
+          emph expan foreign gap gb gloss graphic head hi imprint item l label lb lg list listBibl measure measureGrp media milestone monogr 
+          name note noteGrp num orig p pb ptr publisher q quote rb ref reg relatedItem resp respStmt rs rt ruby series sic sp speaker 
+          stage term textLang time title unclear unit"/>
         <moduleRef key="textstructure"
-          except="argument back body div1 div2 div3 div4 div5 div6 div7 docAuthor docDate docEdition
-          docImprint docTitle front group titlePage titlePart trailer"/>
+          include="TEI byline closer dateline div epigraph floatingText imprimatur opener postscript salute signed text"/>
+        <moduleRef key="gaiji" include="g charDecl char glyph"/>
+        <moduleRef key="verse" include="caesura rhyme"/>
+        <moduleRef key="drama" include="castGroup castItem castList epilogue prologue role roleDesc set spGrp"/>
+        <!-- spoken module is excluded -->
+        <moduleRef key="cmc" include="post"/>
+        <!-- dictionaries module is excluded -->
         <moduleRef key="msdescription"
-          include="msName msDesc msIdentifier repository altIdentifier physDesc history incipit
-          explicit locus msContents"/>
-        <moduleRef key="figures"/>
-        <moduleRef key="analysis" include="s w pc"/>
+          include="msName msDesc msIdentifier repository altIdentifier physDesc history incipit explicit locus msContents"/>
+        <moduleRef key="transcr" include="addSpan am damage delSpan ex facsimile fw handNotes metamark restore retrace secl space subst substJoin supplied surface surfaceGrp surplus transpose undo zone"/>
+        <moduleRef key="textcrit" include="app lem rdg listApp rdgGrp listWit wit witDetail"/>
+        <moduleRef key="namesdates" include="affiliation birth country death education event eventName floruit gender geo 
+          geogFeat listEvent listNym listObject listOrg listPerson listPlace listRelation location nym object objectName occupation 
+          org orgName persName person personGrp place placeName region relation roleName sex state"/>
+        <moduleRef key="figures" include="cell figDesc figure formula notatedMusic row table"/>
+        <!-- corpus module is excluded -->
         <moduleRef key="linking" include="ab anchor seg standOff listAnnotation"/>
-        <moduleRef key="namesdates"
-          except="age bloc climate district faith forename surname addName nameLink genName
-          geogName langKnowledge langKnown nationality objectIdentifier offset persona persPronouns population 
-          settlement residence socecStatus trait terrain"/>
+        <moduleRef key="analysis" include="s w pc"/>
+        <moduleRef key="iso-fs" include="f fs"/>
+        <!-- nets module is excluded -->
+        <!-- certainty module is excluded -->
+        <moduleRef key="tagdocs" include="code eg listRef"/>
+        
         <!--        In person we only use gender -->
         <!--        objectName must be allowed as a direct child of object -->
         <!-- roleName -->
-        <moduleRef key="textcrit" include="app lem rdg listApp rdgGrp listWit wit witDetail "/>
-        <moduleRef key="transcr"
-          except="damageSpan handShift line listTranspose mod path redo sourceDoc"/>
-        <moduleRef key="cmc"/>
-        <moduleRef key="iso-fs" include="f fs"/>
-        <!--        dictionaries module is excluded -->
-        <moduleRef key="verse" except="metDecl metSym"/>
-        <moduleRef key="drama" except="actor camera caption move performance sound
-          tech view"/>
-        <!--        epilogue and prologue, tech -->
-        <!--        spoken module is excluded -->
-        <!--        nets module is excluded -->
-        <!--        certainty module is excluded -->
-        <moduleRef key="tagdocs" include="code eg listRef"/>
-        <moduleRef key="gaiji" include="g charDecl char glyph"/>
+        
         <elementSpec module="core" ident="text" mode="change">
           <desc>This element must have one or more <gi>text</gi> elements or one or more
               <gi>div</gi> elements.</desc>
@@ -113,7 +111,7 @@
                 <elementRef key="date" maxOccurs="unbounded"/>
                 <elementRef key="p" maxOccurs="unbounded"/>
                 <elementRef key="ref" maxOccurs="unbounded"/>
-                <elementRef key="availability" maxOccurs="unbounded"/>  
+                <elementRef key="availability" maxOccurs="unbounded"/>
                 <elementRef key="idno" maxOccurs="unbounded"/>
                 <elementRef key="listRef" maxOccurs="unbounded"/>
               </alternate>
@@ -126,7 +124,7 @@
                 <elementRef key="date" maxOccurs="unbounded"/>
                 <elementRef key="p" maxOccurs="unbounded"/>
                 <elementRef key="ref" maxOccurs="unbounded"/>
-                <elementRef key="availability" maxOccurs="unbounded"/>  
+                <elementRef key="availability" maxOccurs="unbounded"/>
                 <elementRef key="idno" maxOccurs="unbounded"/>
                 <elementRef key="listRef" maxOccurs="unbounded"/>
               </alternate>
